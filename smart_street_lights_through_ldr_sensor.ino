@@ -3,6 +3,7 @@ int led2=3;
 int led3=4;
 int led4=5;
 int led5=6;
+
 const int buz=5; //initialization for buzzer
 int ir1=8;
 int ir2=9;
@@ -49,12 +50,12 @@ void loop(){
     
   digitalWrite(led1,HIGH);
   digitalWrite(led2,HIGH);
-  digitalWrite(led3,HIGH);
+  
     delay(20);
    if(obs2>0){
      digitalWrite(led2,HIGH);
   digitalWrite(led3,HIGH);
-  digitalWrite(led4,HIGH);
+  
      delay(20);
   t2=millis();
     Serial.println(t2);
@@ -64,7 +65,7 @@ void loop(){
     digitalWrite(led1,LOW);
   digitalWrite(led2,LOW);
   digitalWrite(led3,LOW);
-    digitalWrite(led4,LOW);
+   
     
   }
   velocity=t2-t1;
@@ -79,7 +80,7 @@ void loop(){
     
     tone(buz,10);               //buzzer will start beeping
     
-    digitalWrite(led,HIGH);
+    
     delay(20);
     
      
@@ -99,11 +100,11 @@ if(obs3==HIGH)
 {
   digitalWrite(led3,HIGH);
   digitalWrite(led4,HIGH);
-  digitalWrite(led5,HIGH);
+  
 }
 else
 {
-  digitalWrite(led3,LOW);
+  
   digitalWrite(led4,LOW);
   digitalWrite(led5,LOW);
 }
